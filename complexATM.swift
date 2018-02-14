@@ -1,8 +1,8 @@
 // Allen ISD Computer Science Assignment
 // Non-sequential Project | complexATM
-// John Williams
-// Computer Science I, Period 1
-// 2018.01.23
+// Sarah Anderson
+// Computer Science II, Period 7
+// 2018.02.12
 
 
 /*
@@ -27,4 +27,21 @@
 */
 
 // Continue with your code here
+
+assert(CommandLine.arguments.count == 2, "Exactly one argument is required")
+assert(Int(CommandLine.arguments[1]) != nil, "Argument must be an integer")
+var  dollarsRequested = Int(CommandLine.arguments[1])!
+assert(dollarsRequested % 5 == 0, "Dollar value requested must be evenly divisible by $5.00") 
+
+while ( dollarsRequested >= 20 ) {
+    print("$20.00 dispensed")
+
+    dollarsRequested -= 20;
+}
+
+while ( dollarsRequested > 0 ) {
+    print("5.00 dispensed")
+
+    dollarsRequested -= 5;
+}
 

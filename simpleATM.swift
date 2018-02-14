@@ -1,8 +1,8 @@
 // Allen ISD Computer Science Assignment
 // Non-sequential Project | simpleATM
-// John Williams
-// Computer Science I, Period 1
-// 2018.01.23
+// Sarah Anderson
+// Computer Science II, Period 7
+// 2018.02.08
 
 
 /*
@@ -38,3 +38,12 @@ print("ATM will now dispense $20.00 bills to deliver the sum of $\(dollarValueRe
 
 // Continue with your code here
 
+var TwentiesDispensed = Int(CommandLine.arguments[1])!
+
+TwentiesDispensed = dollarValueRequested / 20
+
+while( TwentiesDispensed > 0) {
+    print("$20.00 dispensed")
+
+    TwentiesDispensed -= 1;
+}

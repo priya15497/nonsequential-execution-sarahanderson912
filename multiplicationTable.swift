@@ -1,8 +1,8 @@
 // Allen ISD Computer Science Assignment
 // Non-sequential Project | multiplicationTable
-// John Williams
-// Computer Science I, Period 1
-// 2018.01.23
+// Sarah Anderson
+// Computer Science II, Period 7
+// 2018.02.08
 
 
 /*
@@ -30,3 +30,31 @@
 
 // Continue with your code here
 
+assert(CommandLine.arguments.count == 2, "Exactly one argument required")
+assert(Int(CommandLine.arguments[1]) != nil, "Argument must be an integer")
+assert(Int(CommandLine.arguments[1])! <= 20, "Argument must be 20 or less") 
+
+var numberEntered = Int(CommandLine.arguments[1])!
+var limit = numberEntered
+
+func printer(int: Int){
+
+    if(int < 10){
+        print(" ", int)
+    }
+}
+
+print("  ", terminator:"")
+for i in 1...numberEntered{
+    print(i, terminator:"  ")
+}
+print("")
+
+
+for i in 1...numberEntered{
+    print(i, terminator:"  ")
+    for a in 1...numberEntered{
+        print( i * a, terminator:"  ")
+    }
+    print("")
+}
